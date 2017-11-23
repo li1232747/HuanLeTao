@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+a:link,
+a:visited,
+a:hover,
+a:active {
+  text-decoration: none;
+}
+.bd_color {
+  background-color: #222D32;
+}
+.mt {
+  margin-top: 150px;
+}
