@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>用户管理系统1-用户管理</title>
+    <title>用户管理系统1-一级分类</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
     <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
@@ -30,7 +30,7 @@
         <div class="aside_menu">
             <ul>
                 <li>
-                    <a href="javascript:;" class="active">
+                    <a href="user.html">
                         <i class="glyphicon glyphicon-user"></i>
                         用户管理
                     </a>
@@ -40,8 +40,8 @@
                         <i class="glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
-                    <div style="display: none">
-                        <a href="first.html">一级分类</a>
+                    <div style="display: block">
+                        <a href="javascript:;"  class="active">一级分类</a>
                         <a href="second.html">二级分类</a>
                     </div>
                 </li>
@@ -70,19 +70,20 @@
                     <li>
                         <a href="index.html">管理系统</a>
                     </li>
-                    <li class="active">用户管理</li>
+                    <li>
+                        <a href="javascript:;">分类管理</a>
+                    </li>
+                    <li class="active">一级分类</li>
                 </ol>
 
                 <!-- 内容部分 -->
                 <div class="content">
-                    <table class="table table-bordered table-hover">
+                    <button class="btn btn-default btn_add">添加分类</button>
+                    <table class="table table-bordered table-hover mt">
                         <thead>
                             <tr>
-                                <th width="10%">序号</th>
-                                <th width="30%">用户名</th>
-                                <th width="30%">手机号</th>
-                                <th width="20%">状态</th>
-                                <th width="10%">操作</th>
+                                <th width="20%">序号</th>
+                                <th width="80%">分类名称</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -120,23 +121,26 @@
         </div>
     </div>
 
-    <!-- 操作模态框 -->
-    <div class="modal fade" tabindex="-1" id="updateModal">
+    <!-- 添加模态框 -->
+    <div class="modal fade" tabindex="-1" id="addModal">
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">
                             <span aria-hidden="true">&times;</span>
                         </button>
-                    <h4 class="modal-title">温馨提示</h4>
+                    <h4 class="modal-title">添加分类</h4>
                 </div>
-                <div class="modal-body text-danger">
-                    <p>
-                        <i class="glyphicon glyphicon-info-sign"></i> 您确定要执行此操作吗？</p>
+                <div class="modal-body">
+                    <form id="form">
+                        <div class="form-group">
+                            <input type="text" name="categoryName" autocomplete="off" class="form-control" placeholder="请输入一级分类">
+                        </div>
+                    </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary btn_update">确定</button>
+                    <button type="submit" form="form" class="btn btn-primary btn_submit">确定</button>
                 </div>
             </div>
         </div>
@@ -147,14 +151,7 @@
         {{each rows v i}}
         <tr>
             <td>{{(page-1)*size+i+1}}</td>
-            <td>{{v.username}}</td>
-            <td>{{v.mobile}}</td>
-            <td>{{v.isDelete == 0? "禁用" : "正常"}}</td>
-            <td data-id="{{v.id}}">
-                {{if v.isDelete == 1}}
-                <button class="btn btn-danger">禁用</button> {{/if}} {{if v.isDelete == 0}}
-                <button class="btn btn-primary">启用</button> {{/if}}
-            </td>
+            <td>{{v.categoryName}}</td>
         </tr>
         {{/each}}
     </script>
@@ -166,7 +163,7 @@
     <script src="./lib/nprogress/nprogress.js"></script>
     <script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/user.js"></script>
+    <script src="./js/first.js"></script>
 </body>
 
 </html>

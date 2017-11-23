@@ -1,7 +1,7 @@
 $( function() {
 
     // 表单验证
-    $form = $( 'form' );
+    var $form = $( 'form' );
     $form.bootstrapValidator( {
         // 样式图标
         feedbackIcons: {
