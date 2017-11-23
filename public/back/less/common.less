@@ -32,6 +32,11 @@ a:link, a:visited, a:hover, a:active {
     margin-top: 20px;
 }
 
+.table.table-bordered th, td {
+    text-align: center;
+    vertical-align: middle;
+}
+
 /* 主页样式 */
 .lt_aside {
     width: 180px;
@@ -50,11 +55,13 @@ a:link, a:visited, a:hover, a:active {
         background-color: #367FA9;
         line-height: 50px;
         text-align: center;
-        >span {
+        >a {
+            >span {
             font-weight: 700;
             color: #fff;
             font-size: 26px;
             margin-left: 10px;
+            }
         }
     }
     .aside_user {
@@ -122,7 +129,12 @@ a:link, a:visited, a:hover, a:active {
     }
     .main_body {
         .content {
-            >div {
+            .content_left {
+                margin-top: 30px;
+                width: 45%;
+                height: 400px;
+            }
+            .content_right {
                 margin-top: 30px;
                 width: 45%;
                 height: 400px;

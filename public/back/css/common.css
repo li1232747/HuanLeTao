@@ -28,6 +28,11 @@ a:active {
 .mt {
   margin-top: 20px;
 }
+.table.table-bordered th,
+td {
+  text-align: center;
+  vertical-align: middle;
+}
 /* 主页样式 */
 .lt_aside {
   width: 180px;
@@ -48,7 +53,7 @@ a:active {
   line-height: 50px;
   text-align: center;
 }
-.lt_aside .aside_top > span {
+.lt_aside .aside_top > a > span {
   font-weight: 700;
   color: #fff;
   font-size: 26px;
@@ -102,7 +107,12 @@ a:active {
   color: #fff;
   font-size: 16px;
 }
-.lt_main .main_body .content > div {
+.lt_main .main_body .content .content_left {
+  margin-top: 30px;
+  width: 45%;
+  height: 400px;
+}
+.lt_main .main_body .content .content_right {
   margin-top: 30px;
   width: 45%;
   height: 400px;

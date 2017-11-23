@@ -1,18 +1,20 @@
 // 进度条功能
 // 禁用进度环
-NProgress.configure({ showSpinner: false });
+NProgress.configure( {
+    showSpinner: false
+} );
 
 // ajax 请求开始时触发
-$( document ).ajaxStart(function(){
+$( document ).ajaxStart( function() {
     // 开启进度条
     NProgress.start();
-});
+} );
 
 // ajax 请求结束时触发
-$(document).ajaxStop(function () {
+$( document ).ajaxStop( function() {
     // 关闭进度条
     NProgress.done();
-});
+} );
 
 
 // 给分类管理注册点击事件，显示和隐藏分类
@@ -34,19 +36,19 @@ $( '.lt_logout' ).on( 'click', function() {
     $( '#logoutModal' ).modal( 'show' );
 
     // 给退出按钮注册点击事件
-    $( '.btn_logout' ).off().on( 'click', function(){
+    $( '.btn_logout' ).off().on( 'click', function() {
         // 发送ajax请求
-        $.ajax({
+        $.ajax( {
             type: 'get',
             url: '/employee/employeeLogout',
-            success: function( info ){
+            success: function( info ) {
                 // console.log(info);
-                if( info.success ){
+                if ( info.success ) {
                     // 退出成功,跳转到登录页面
                     location.href = 'login.html';
                 }
             }
-        });
+        } );
 
     } );
 
@@ -54,17 +56,17 @@ $( '.lt_logout' ).on( 'click', function() {
 
 
 // 给非登录页都验证登录操作
-if( location.href.indexOf( 'login.html' ) === -1 ){
+if ( location.href.indexOf( 'login.html' ) === -1 ) {
     // 发送 ajax 请求
-    $.ajax({
+    $.ajax( {
         type: 'get',
         url: '/employee/checkRootLogin',
-        success: function ( info ){
+        success: function( info ) {
             // console.log(info);
-            if( info.error === 400 ){
+            if ( info.error === 400 ) {
                 // 未登录，跳转到登录页
                 location.href = 'login.html';
             }
         }
-    });
+    } );
 }
