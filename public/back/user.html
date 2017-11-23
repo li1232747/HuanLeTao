@@ -5,10 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>用户管理系统1-首页</title>
+    <title>用户管理系统1-用户管理</title>
     <link rel="stylesheet" href="./lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="./lib/bootstrap-validator/css/bootstrapValidator.min.css">
-    <link rel="stylesheet" href="./lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="./css/common.css">
 </head>
 
@@ -34,11 +33,11 @@
                     </a>
                 </li>
                 <li>
-                    <a href="javascript:;" class="cate_admin">
+                    <a href="javascript:;">
                         <i class="glyphicon glyphicon-list"></i>
                         分类管理
                     </a>
-                    <div style="display: none">
+                    <div>
                         <a href="first.html">一级分类</a>
                         <a href="second.html">二级分类</a>
                     </div>
@@ -54,12 +53,8 @@
     </div>
     <div class="lt_main">
         <div class="main_topbar">
-            <a href="javascript:;" class="pull-left lt_menu">
-                <i class="glyphicon glyphicon-align-justify"></i>
-            </a>
-            <a href="javascript:;" class="pull-right lt_logout">
-                <i class="glyphicon glyphicon-log-out"></i>
-            </a>
+            <a href="javascript:;" class="pull-left"><i class="glyphicon glyphicon-align-justify"></i></a>
+            <a href="javascript:;" class="pull-right"><i class="glyphicon glyphicon-log-out"></i></a>
         </div>
         <div class="main_body">
             <div class="container-fluid mt">
@@ -68,35 +63,11 @@
                     <li>
                         <a href="index.html">管理系统</a>
                     </li>
-                    <li class="active">首页</li>
+                    <li class="active">用户管理</li>
                 </ol>
 
                 <!-- 内容部分 -->
-                <div class="content">
-                    <div class="content_left pull-left"></div>
-                    <div class="content_right pull-right"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- 退出模态框 -->
-    <div class="modal fade" tabindex="-1" id="logoutModal">
-        <div class="modal-dialog modal-sm">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                    <h4 class="modal-title">温馨提示</h4>
-                </div>
-                <div class="modal-body text-danger">
-                    <p><i class="glyphicon glyphicon-info-sign"></i> 您确定要退出后台管理系统吗？</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-                    <button type="button" class="btn btn-primary btn_logout">退出</button>
-                </div>
+                <div class="content"></div>
             </div>
         </div>
     </div>
@@ -104,8 +75,6 @@
     <script src="./lib/jquery/jquery.js"></script>
     <script src="./lib/bootstrap/js/bootstrap.js"></script>
     <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
-    <script src="./lib/nprogress/nprogress.js"></script>
-    <script src="./lib/echarts/echarts.min.js"></script>
     <script src="./js/common.js"></script>
     <script src="./js/index.js"></script>
 </body>

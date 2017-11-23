@@ -1,6 +1,11 @@
+/* 公共样式 */
 * {
   margin: 0;
   padding: 0;
+}
+html,
+body {
+  height: 100%;
 }
 li {
   list-style: none;
@@ -19,4 +24,86 @@ a:active {
 }
 .mt {
   margin-top: 150px;
+}
+.mt {
+  margin-top: 20px;
+}
+/* 主页样式 */
+.lt_aside {
+  width: 180px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #222D32;
+  transition: all .5s;
+}
+.lt_aside.now {
+  left: -180px;
+}
+.lt_aside .aside_top {
+  width: 100%;
+  height: 50px;
+  background-color: #367FA9;
+  line-height: 50px;
+  text-align: center;
+}
+.lt_aside .aside_top > span {
+  font-weight: 700;
+  color: #fff;
+  font-size: 26px;
+  margin-left: 10px;
+}
+.lt_aside .aside_user > div > img {
+  margin: 30px auto 10px;
+  display: block;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.lt_aside .aside_user > div > p {
+  color: #fff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.lt_aside .aside_menu > ul > li a {
+  padding-left: 50px;
+  color: #ccc;
+  display: block;
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+}
+.lt_aside .aside_menu > ul > li a.active {
+  background-color: #1D1F21;
+  color: #fff;
+  border-left: 3px solid #3C8DBC;
+}
+.lt_aside .aside_menu > ul > li:nth-child(2) > div > a {
+  padding-left: 65px;
+}
+.lt_main {
+  width: 100%;
+  height: 100%;
+  padding-left: 180px;
+  transition: all .5s;
+}
+.lt_main.now {
+  padding-left: 0;
+}
+.lt_main .main_topbar {
+  width: 100%;
+  height: 50px;
+  background-color: #3C8DBC;
+  line-height: 50px;
+  padding: 0 20px;
+}
+.lt_main .main_topbar > a {
+  color: #fff;
+  font-size: 16px;
+}
+.lt_main .main_body .content > div {
+  margin-top: 30px;
+  width: 45%;
+  height: 400px;
 }
