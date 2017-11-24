@@ -139,3 +139,11 @@ a:active {
   left: 0;
   opacity: 0;
 }
+.reminder {
+  position: absolute;
+  width: 500px;
+  height: 34px;
+  line-height: 34px;
+  top: 0;
+  left: 90px;
+}
