@@ -1,0 +1,100 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.lt-container {
+    width: 100%;
+    height: 100%;
+    max-width: 640px;
+    min-width: 320px;
+    margin: 0 auto;
+    position: relative;
+    padding: 45px 0 55px 0; 
+    .lt_header {
+        width: 100%;
+        height: 45px;
+        position: absolute;
+        top: 0;
+        background-color: #069;
+        text-align: center;
+        line-height: 45px;
+        color: #fff;
+        .icon_left {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: #fff;
+        }
+        >h4 {
+            line-height: 45px;
+            padding: 0 45px;
+            margin: 0;
+            font-weight: 300;
+            font-size: 20px;
+        }
+        .icon_right {
+            width: 45px;
+            height: 45px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            color: #fff;
+        }
+    }
+    .lt_main {
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        overflow: hidden;
+        position: relative;
+    }
+    .lt_footer {
+        width: 100%;
+        height: 55px;
+        position: absolute;
+        bottom: 0;
+        background-color: #069;
+        >ul {
+            >li {
+                float: left;
+                width: 25%;
+                text-align: center;
+                padding-top: 8px;
+                &.active {
+                    >a {
+                        color: darkorange;
+                        >p {
+                            color: darkorange;
+                        }
+                    }
+                }
+                >a {
+                    color: #fff;
+                    >p {
+                        color: #fff;
+                        margin: 0;
+                    }
+                }
+            }
+        }
+    }
+}

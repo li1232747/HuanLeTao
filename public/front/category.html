@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>欢乐淘-分类</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/category.css">
+</head>
+
+<body>
+    <div class="lt-container">
+        <!-- 头部 -->
+        <div class="lt_header">
+            <!-- 返回上一页 -->
+            <a href="javascript:history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+            <h4>欢乐淘分类</h4>
+            <a href="search.html" class="icon_right"><i class="fa fa-search"></i></a>
+        </div>
+        <!-- 内容 -->
+        <div class="lt_main">
+            <div class="category_left">
+                <div class="mui-scroll-wrapper">
+                    <ul class="mui-scroll">
+                        <!-- 一级分类坑 -->
+                    </ul>
+                </div>
+            </div>
+            <div class="category_right">
+                <div class="mui-scroll-wrapper">
+                    <div class="mui-scroll">
+                        <!-- 二级分类坑 -->
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <!-- 底部 -->
+        <div class="lt_footer">
+            <ul class="mui-clearfix">
+                <li>
+                    <a href="index.html">
+                        <i class="fa fa-home"></i>
+                        <p>首页</p>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="category.html">
+                        <i class="fa fa-bars"></i>
+                        <p>分类</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="cart.html">
+                        <i class="fa fa-shopping-cart"></i>
+                        <p>购物车</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="user.html">
+                        <i class="fa fa-user"></i>
+                        <p>会员中心</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+    </div>
+
+    <!-- 一级分类模板 -->
+    <script type="text/html" id="tpl_left">
+        {{each rows v i}}
+        <li data-id="{{v.id}}" class="{{i==0?'active':''}}"><a href="javascript:;">{{v.categoryName}}</a></li>
+        {{/each}}
+    </script>
+
+    <!-- 二级分类模板 -->
+    <script type="text/html" id="tpl_right">
+            {{each rows v i}}
+            <li><a href="#"><img src="{{v.brandLogo}}" alt=""><p>{{v.brandName}}</p></a></li>
+            {{/each}}
+    </script>
+    
+
+    <script src="./lib/zepto/zepto.min.js"></script>
+    <script src="./lib/mui/js/mui.min.js"></script>
+    <script src="./lib/artTemplate/template-web.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/category.js"></script>
+</body>
+
+</html>
