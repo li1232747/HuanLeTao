@@ -92,5 +92,8 @@ $( function() {
 
         // 重新渲染
         render();
+
+        // 跳转到searchList页面
+        location.href = 'searchList.html?key='+ value;
     });
 } );

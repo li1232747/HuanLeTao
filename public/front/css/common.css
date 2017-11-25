@@ -108,6 +108,9 @@ img {
   display: block;
   width: 100%;
 }
+.lt_product > ul > li > a > p {
+  height: 42px;
+}
 .lt_product > ul > li > a > p .price {
   color: red;
 }
