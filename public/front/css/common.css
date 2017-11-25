@@ -90,3 +90,27 @@ img {
   color: #fff;
   margin: 0;
 }
+/* 商品 样式 */
+.lt_product {
+  padding: 10px;
+}
+.lt_product > ul > li {
+  width: 48%;
+  float: left;
+  text-align: center;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+.lt_product > ul > li:nth-child(even) {
+  float: right;
+}
+.lt_product > ul > li > a {
+  display: block;
+  width: 100%;
+}
+.lt_product > ul > li > a > p .price {
+  color: red;
+}
+.lt_product > ul > li > a > p .oldPrice {
+  text-decoration: line-through;
+}

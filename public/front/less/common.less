@@ -98,3 +98,32 @@ img {
         }
     }
 }
+
+/* 商品 样式 */
+.lt_product {
+    padding: 10px;
+    >ul {
+        >li {
+            width: 48%;
+            float: left;
+            text-align: center;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+            &:nth-child(even) {
+                float: right;
+            }
+            >a {
+                display: block;
+                width: 100%;
+                >p {
+                    .price {
+                        color: red;
+                    }
+                    .oldPrice {
+                        text-decoration: line-through;
+                    }
+                }
+            }
+        }
+    }
+}
